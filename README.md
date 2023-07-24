@@ -9,7 +9,7 @@
 ## 使用 docker 部署 mdnice
 
 ``` sh
-docker run --name mdnice -d -p 8000:80 weihanli/mdnice:latest
+docker run --name mdnice -d -p 9000:80 --restart always weihanli/mdnice:latest
 ```
 
 ## markdown-nice 简介
