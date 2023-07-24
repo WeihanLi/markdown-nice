@@ -1,9 +1,16 @@
-<div align="center">
-<a href="https://mdnice.com">
-<img width="500" src="https://files.mdnice.com/logo.svg"/>
-</a>
-</div>
-<h1 align="center">Markdown Nice</h1>
+# markdown-nice
+
+## Intro
+
+基于原仓库 [mdnice](https://github.com/mdnice/markdown-nice) 改造，增加 docker 支持
+
+在线体验地址：<https://mdnice.weihanli.top>
+
+## 使用 docker 部署 mdnice
+
+``` sh
+docker run --name mdnice -d -p 8000:80 weihanli/mdnice:latest
+```
 
 ## markdown-nice 简介
 
@@ -11,9 +18,3 @@
 - 支持微信公众号、知乎和稀土掘金
 - 欢迎[在线使用](https://mdnice.com/)
 - 有疑问请参考 [如何有效的解决 mdnice 相关问题？](https://github.com/mdnice/markdown-nice/issues/163)
-
-## 使用 docker 部署 mdnice
-
-``` sh
-docker run --name mdnice -d -p 8000:80 weihanli/mdnice:lastest
-```
