@@ -9,5 +9,6 @@ COPY . .
 RUN yarn run build
 
 FROM nginx:alpine
+LABEL maintainer=weihanli@outlook.com
 
 COPY --from=builder /app/build /usr/share/nginx/html
