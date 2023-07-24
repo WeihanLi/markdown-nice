@@ -50,7 +50,7 @@ class VersionDialog extends Component {
       }
       const newestVersion = localStorage.getItem(NEWEST_VERSION);
       if (data.versionNumber !== newestVersion) {
-        this.props.dialog.setVersionOpen(true);
+        this.props.dialog.setVersionOpen(false);
         localStorage.setItem(NEWEST_VERSION, data.versionNumber);
       }
       this.setState({...data});
