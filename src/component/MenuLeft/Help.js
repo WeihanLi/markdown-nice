@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {Menu, Dropdown} from "antd";
 
 import About from "./Help/About";
-import Version from "./Help/Version";
 import Document from "./Help/Document";
 import Question from "./Help/Question";
 
@@ -12,9 +11,6 @@ const menu = (
   <Menu>
     <Menu.Item>
       <About />
-    </Menu.Item>
-    <Menu.Item>
-      <Version />
     </Menu.Item>
     <Menu.Item>
       <Document />

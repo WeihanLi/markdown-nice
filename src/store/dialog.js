@@ -7,8 +7,6 @@ class Dialog {
 
   @observable isAboutOpen = false;
 
-  @observable isVersionOpen = false;
-
   @observable isFormOpen = false;
 
   @observable isHistoryOpen = false;
@@ -38,11 +36,6 @@ class Dialog {
   @action
   setAboutOpen = (isAboutOpen) => {
     this.isAboutOpen = isAboutOpen;
-  };
-
-  @action
-  setVersionOpen = (isVersionOpen) => {
-    this.isVersionOpen = isVersionOpen;
   };
 
   @action

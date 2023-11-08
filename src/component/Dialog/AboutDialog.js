@@ -13,11 +13,6 @@ class AboutDialog extends Component {
     this.props.dialog.setAboutOpen(false);
   };
 
-  handleVersion = () => {
-    this.props.dialog.setAboutOpen(false);
-    this.props.dialog.setVersionOpen(true);
-  };
-
   render() {
     return (
       <Modal
@@ -28,9 +23,6 @@ class AboutDialog extends Component {
         onOk={this.handleOk}
         onCancel={this.handleCancel}
         footer={[
-          <Button key="version" onClick={this.handleVersion}>
-            更新记录
-          </Button>,
           <Button key="submit" type="primary" onClick={this.handleOk}>
             确认
           </Button>,
@@ -74,26 +66,7 @@ class AboutDialog extends Component {
           >
             &nbsp;Gitee&nbsp;
           </a>
-          和新项目
-          <a
-            id="nice-about-dialog-resume"
-            style={style.a}
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/guanpengchn/markdown-resume"
-          >
-            &nbsp;Markdown 简历
-          </a>
-          ，同时我们也组建了「
-          <strong style={style.strong}>微信群</strong>
-          」，右下角关注公众号回复「排版」拉你入群，愿意
-          <strong style={style.strong}>微信打赏</strong>
-          就更好啦。
         </p>
-        <div style={{display: "flex", alignItems: "center"}}>
-          <img alt="图片描述" style={style.leftImgWidth} src="https://my-wechat.mdnice.com/bonus.png" />
-          <img alt="图片描述" style={style.rightImgWidth} src="https://my-wechat.mdnice.com/wechat.jpg" />
-        </div>
       </Modal>
     );
   }
