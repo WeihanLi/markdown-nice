@@ -4,12 +4,19 @@
 
 基于原仓库 [mdnice](https://github.com/mdnice/markdown-nice) 改造，增加 docker 支持
 
-在线体验地址：<https://mdnice.weihanli.top>
+在线体验地址：<https://mdnice.weihanli.xyz>
 
-## 使用 docker 部署 mdnice
+## 使用 container 部署 mdnice
+
+docker
 
 ``` sh
 docker run --name mdnice -d -p 9000:80 --restart always weihanli/mdnice:latest
+```
+
+podman
+``` sh
+podman run --name mdnice -d -p 9000:80 --restart always weihanli/mdnice:latest
 ```
 
 ## markdown-nice 简介
