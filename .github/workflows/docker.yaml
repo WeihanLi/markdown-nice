@@ -30,3 +30,11 @@ jobs:
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
+
+    - name: dotnet-exec
+      uses: WeihanLi/dotnet-exec-action@0.1.2
+      with:
+        script: "./scripts/build.cs"
+      env:
+        DingBotWebhookUrl: ${{ secrets.DINGBOTWEBHOOKURL }}
+          
