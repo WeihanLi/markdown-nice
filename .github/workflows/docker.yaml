@@ -32,9 +32,10 @@ jobs:
       run: echo ${{ steps.docker_build.outputs.digest }}
 
     - name: dotnet-exec
-      uses: WeihanLi/dotnet-exec-action@0.16.0
+      uses: WeihanLi/dotnet-exec-action@0.16.1
       with:
         script: "./scripts/build.cs"
+        options: "--debug --web"
       env:
         DingBotWebhookUrl: ${{ secrets.DINGBOTWEBHOOKURL }}
           
