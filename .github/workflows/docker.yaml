@@ -35,7 +35,7 @@ jobs:
       uses: WeihanLi/dotnet-exec-action@0.16.1
       with:
         script: "./scripts/build.cs"
-        options: "--debug --web"
+        options: "--debug"
       env:
         DingBotWebhookUrl: ${{ secrets.DINGBOTWEBHOOKURL }}
           
