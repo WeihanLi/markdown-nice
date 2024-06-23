@@ -32,7 +32,7 @@ jobs:
       run: echo ${{ steps.docker_build.outputs.digest }}
 
     - name: dotnet-exec
-      uses: WeihanLi/dotnet-exec-action@c6057670431a07419dbd8b779641340e711cd889
+      uses: WeihanLi/dotnet-exec-action@0.21.0
       with:
         script: "./scripts/build.cs"
         options: "--debug"
