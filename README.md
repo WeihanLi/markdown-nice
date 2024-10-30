@@ -6,6 +6,8 @@
 
 在线体验地址：<https://mdnice.weihanli.xyz>
 
+docker image on dockerhub: https://hub.docker.com/r/weihanli/mdnice
+
 ## 使用 container 部署 mdnice
 
 docker
