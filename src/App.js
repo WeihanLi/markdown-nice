@@ -380,7 +380,7 @@ class App extends Component {
                   <section
                     id={LAYOUT_ID}
                     data-tool="mdnice编辑器"
-                    data-website="https://www.mdnice.com"
+                    data-website="https://mdnice.weihanli.xyz"
                     dangerouslySetInnerHTML={{
                       __html: parseHtml,
                     }}
