@@ -1,8 +1,6 @@
-using System.Net.Http.Json;
-
 var message = """
 The `weihanli/mdnice` docker image has been updated
-[Amazing]
+[amazingbot]
 """;
   
 var webhookUrl = Environment.GetEnvironmentVariable("DingBotWebhookUrl");
