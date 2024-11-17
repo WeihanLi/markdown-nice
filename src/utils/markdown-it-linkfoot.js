@@ -221,6 +221,12 @@ function linkFoot(state, silent) {
 
       let tokens;
 
+      if (!state) {
+        state = {};
+      }
+      if (!state.env) {
+        state.env = {};
+      }
       if (!state.env.footnotes) {
         state.env.footnotes = {};
       }
@@ -278,6 +284,12 @@ function footnoteTail(state) {
     insideRef = false,
     refTokens = {};
 
+  if (!state) {
+    return;
+  }
+  if (!state.env) {
+    return;
+  }
   if (!state.env.footnotes) {
     return;
   }
