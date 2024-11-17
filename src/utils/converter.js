@@ -95,7 +95,7 @@ export const addJuejinSuffix = () => {
   const suffix = document.createElement("p");
   suffix.id = "nice-suffix-juejin-container";
   suffix.className = "nice-suffix-juejin-container";
-  suffix.innerHTML = `本文使用 <a href="https://mdnice.com/?from=juejin">mdnice</a> 排版`;
+  suffix.innerHTML = `本文使用 <a href="https://mdnice.weihanli.xyz/?from=juejin">mdnice</a> 排版`;
 
   const element = document.getElementById(LAYOUT_ID);
   element.appendChild(suffix);
@@ -106,7 +106,7 @@ export const solveHtml = () => {
 
   const inner = element.children[0].children;
   for (const item of inner) {
-    item.setAttribute("data-tool", "mdnice编辑器");
+    item.setAttribute("data-tool", "mdnice.weihanli.xyz");
   }
   let html = element.innerHTML;
   html = html.replace(/<mjx-container (class="inline.+?)<\/mjx-container>/g, "<span $1</span>");

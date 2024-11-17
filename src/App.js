@@ -52,6 +52,10 @@ class App extends Component {
     this.state = {
       focus: false,
     };
+    window.parseMdToHtml = function (mdContent) {
+      const htmlContent = markdownParser.parse(mdContent);
+      return htmlContent;
+    };
   }
 
   componentDidMount() {
