@@ -53,7 +53,7 @@ class App extends Component {
       focus: false,
     };
     window.parseMdToHtml = function (mdContent) {
-      const htmlContent = markdownParser.parse(mdContent);
+      const htmlContent = markdownParser.render(mdContent);
       return htmlContent;
     };
   }
