@@ -14,6 +14,7 @@ import Sidebar from "./layout/Sidebar";
 import StyleEditor from "./layout/StyleEditor";
 import EditorMenu from "./layout/EditorMenu";
 import SearchBox from "./component/SearchBox";
+import {solveRawHtml} from "./utils/converter";
 
 import "./App.css";
 import "./utils/mdMirror.css";
@@ -54,7 +55,8 @@ class App extends Component {
     };
     window.parseMdToHtml = function (mdContent) {
       const htmlContent = markdownParser.render(mdContent);
-      return htmlContent;
+      const html = solveRawHtml(`<section id="nice" data-tool="mdnice-editor" data-website="https://mdnice.weihanli.xyz">${htmlContent}</section>`);
+      return html;
     };
   }
 

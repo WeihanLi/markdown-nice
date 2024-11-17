@@ -132,6 +132,30 @@ export const solveHtml = () => {
   return res;
 };
 
+export const solveRawHtml = (html) => {
+  html = html.replace(/<mjx-container (class="inline.+?)<\/mjx-container>/g, "<span $1</span>");
+  html = html.replace(/\s<span class="inline/g, '&nbsp;<span class="inline');
+  html = html.replace(/svg><\/span>\s/g, "svg></span>&nbsp;");
+  html = html.replace(/mjx-container/g, "section");
+  html = html.replace(/class="mjx-solid"/g, 'fill="none" stroke-width="70"');
+  html = html.replace(/<mjx-assistive-mml.+?<\/mjx-assistive-mml>/g, "");
+  const basicStyle = document.getElementById(BASIC_THEME_ID).innerText;
+  const markdownStyle = document.getElementById(MARKDOWN_THEME_ID).innerText;
+  const codeStyle = document.getElementById(CODE_THEME_ID).innerText;
+  const fontStyle = document.getElementById(FONT_THEME_ID).innerText;
+  let res = "";
+  try {
+    res = juice.inlineContent(html, basicStyle + markdownStyle + codeStyle + fontStyle, {
+      inlinePseudoElements: true,
+      preserveImportant: true,
+    });
+  } catch (e) {
+    message.error("请检查 CSS 文件是否编写正确！");
+  }
+
+  return res;
+};
+
 export const copySafari = (text) => {
   // 获取 input
   let input = document.getElementById("copy-input");
