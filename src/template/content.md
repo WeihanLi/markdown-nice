@@ -1,5 +1,3 @@
-![](https://my-wechat.mdnice.com/logo.svg)
-
 请使用 **Chrome** 浏览器。
 
 请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。
@@ -8,9 +6,6 @@
 
 - 支持自定义样式的 Markdown 编辑器
 - 支持微信公众号、知乎和稀土掘金
-- 欢迎扫码回复「排版」加入用户群
-
-![](https://my-wechat.mdnice.com/wechat.jpg)
 
 ## 2 主题
 
@@ -321,4 +316,6 @@ Markdown Nice 这么好用，简直是{喜大普奔|hē hē hē hē}呀！
 
 ### 5.3 更多文档
 
-更多文档请参考 [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")
+- [Markdown Syntax](https://weihanli.github.io/markdown-syntax-summary/syntax.html)
+- [GitHub Markdown Syntax](https://weihanli.github.io/markdown-syntax-summary/githubSyntax.html)
+- [markdown-nice-docs](https://preview.mdnice.com/articles/ "更多文档")
