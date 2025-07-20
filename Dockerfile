@@ -3,7 +3,9 @@ WORKDIR /app
 
 # install and cache app dependencies
 COPY package.json .
-RUN export NODE_OPTIONS=--openssl-legacy-provider && yarn
+
+ENV NODE_OPTIONS=--openssl-legacy-provider
+RUN yarn
 
 COPY . .
 RUN yarn run build
