@@ -1,9 +1,9 @@
-FROM node:16-alpine AS builder
+FROM node:alpine AS builder
 WORKDIR /app
 
 # install and cache app dependencies
 COPY package.json .
-RUN yarn
+RUN export NODE_OPTIONS=--openssl-legacy-provider && yarn
 
 COPY . .
 RUN yarn run build
