@@ -35,7 +35,7 @@ jobs:
         platforms: "linux/amd64,linux/arm64"
 
     - name: dotnet-exec
-      uses: WeihanLi/dotnet-exec-action@0.29.0
+      uses: WeihanLi/dotnet-exec-action@0.30.0
       with:
         script: "./scripts/build.cs"
       env:
