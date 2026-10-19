@@ -3,6 +3,7 @@ WORKDIR /app
 
 # install and cache app dependencies
 COPY package.json .
+COPY yarn.lock .
 
 ENV NODE_OPTIONS=--openssl-legacy-provider
 RUN npm install -g yarn && yarn
