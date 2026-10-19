@@ -6,7 +6,7 @@ COPY package.json .
 COPY yarn.lock .
 
 ENV NODE_OPTIONS=--openssl-legacy-provider
-RUN npm install -g yarn && yarn
+RUN yarn
 
 COPY . .
 RUN yarn run build
